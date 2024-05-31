@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Security</string>
+    <string name="otp_verifycation">OTP Verifycation</string>
+    <string name="we_will_send_you_otp_on_this_mobile">We will send you OTP on this mobile</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="enter_your_number_phone">Enter your number phone</string>
+    <string name="_84">+84</string>
+    <string name="start">+84-</string>
+    <string name="_392272536">392272536</string>
+    <string name="your_phone_number">your phone number</string>
+    <string name="phone_number">Phone number</string>
 </resources>

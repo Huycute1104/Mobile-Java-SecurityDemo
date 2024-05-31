@@ -9,4 +9,7 @@
     <string name="_392272536">392272536</string>
     <string name="your_phone_number">your phone number</string>
     <string name="phone_number">Phone number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="didn_t_receive_the_otp">Didn\'t receive the OTP</string>
+    <string name="resend_otp">RESEND OTP</string>
 </resources>

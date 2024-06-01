@@ -153,17 +153,30 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnGetOTP"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:text="Verify"
-            android:background="@drawable/background_button"
-            android:textColor="@color/White"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            />
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnVerify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="Verify"
+                android:background="@drawable/background_button"
+                android:textColor="@color/White"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+        </FrameLayout>
+
 
     </LinearLayout>
 </ScrollView>

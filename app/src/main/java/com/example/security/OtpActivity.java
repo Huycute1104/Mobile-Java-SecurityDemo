@@ -64,7 +64,7 @@ public class OtpActivity extends AppCompatActivity {
                                 getOTP.setVisibility(View.VISIBLE);
                                 Intent intent = new Intent(getApplicationContext(), VerifyOTP.class);
                                 intent.putExtra("mobile",input.getText().toString());
-                                intent.putExtra("vetificationId",verificationId);
+                                intent.putExtra("verificationId",verificationId);
                                 startActivity(intent);
                             }
                         }

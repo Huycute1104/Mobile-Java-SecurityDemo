@@ -21,10 +21,13 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.Firebase;
+import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+
+import java.util.concurrent.TimeUnit;
 
 public class VerifyOTP extends AppCompatActivity {
 
@@ -84,7 +87,33 @@ public class VerifyOTP extends AppCompatActivity {
 
             }
         });
+        findViewById(R.id.txtResendOTP).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                        "+84"+ getIntent().getStringExtra("mobile"),
+                        60,
+                        TimeUnit.SECONDS,
+                        VerifyOTP.this,
+                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
+                            @Override
+                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+                            }
 
+                            @Override
+                            public void onVerificationFailed(@NonNull FirebaseException e) {
+                                Toast.makeText(VerifyOTP.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onCodeSent(@NonNull String newVerificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                                verificationId = newVerificationId;
+                                Toast.makeText(VerifyOTP.this, "OTP is Send", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                );
+            }
+        });
     }
 
     private void setupOTPInput() {

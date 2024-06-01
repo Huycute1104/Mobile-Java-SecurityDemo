@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "321202611305",
+    "project_id": "verify-otp-28f98",
+    "storage_bucket": "verify-otp-28f98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321202611305:android:c0e1b00edee3c216e5eef8",
+        "android_client_info": {
+          "package_name": "com.example.security"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS7XGqTmyTLs3HBQokwZ0TlpbtHapVS1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

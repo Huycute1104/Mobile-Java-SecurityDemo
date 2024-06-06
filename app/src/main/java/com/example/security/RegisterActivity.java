@@ -105,7 +105,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             Log.d("success adding user to fire store", "user profile is created for " + userID);
                                         }
                                     });
-                                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 }
                                 else{
                                     Toast.makeText(RegisterActivity.this, "error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
